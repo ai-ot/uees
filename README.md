@@ -189,10 +189,26 @@ uees/
 
 ---
 
+## Limitaciones y trabajo futuro
+- **Desbalance severo (97/3):** penaliza el *recall* de la clase 1.
+- **Modelos base:** faltan ensembles (Random Forest/XGBoost) con `class_weight` o SMOTE.
+- **Umbral de decisión:** optimizable con curva PR según costo de error.
+- **Temporalidad:** variables independientes del tiempo; en producción conviene añadir ventanas móviles y deriva de datos.
+
+---
+
 ## Requisitos
 
 ```bash
 pip install -r requirements.txt
+pandas>=2.0
+numpy>=1.24
+matplotlib>=3.7
+seaborn>=0.12
+scikit-learn>=1.3
+imbalanced-learn>=0.11
+jupyter>=1.0
+
 Miembro,Rol
 [Tu Nombre],EDA & Preprocesamiento
 [Compañero 1],Modelos SVM & Árbol
